@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Delete";
+}
+
+@model Entertainer
+
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <h1 class="display-5 fw-bolder text-white mb-2 text-center">Delete Entertainer</h1>
+        </div>
+    </div>
+</header>
+
+<div class="container text-center">
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-6">
+                @Html.DisplayNameFor(model => model.EntertainerID)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.EntertainerID)
+            </dd>
+            <dt class="col-sm-6">
+                @Html.DisplayNameFor(model => model.EntStageName)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.EntStageName)
+            </dd>
+            <dt class="col-sm-6">
+                @Html.DisplayNameFor(model => model.EntSSN)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.EntSSN)
+            </dd>
+            <dt class="col-sm-6">
+                @Html.DisplayNameFor(model => model.EntStreetAddress)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.EntStreetAddress)
+            </dd>
+            <dt class="col-sm-6">
+                @Html.DisplayNameFor(model => model.EntCity)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.EntCity)
+            </dd>
+            <dt class="col-sm-6">
+                @Html.DisplayNameFor(model => model.EntState)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.EntState)
+            </dd>
+            <dt class="col-sm-6">
+                @Html.DisplayNameFor(model => model.EntZipCode)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.EntZipCode)
+            </dd>
+            <dt class="col-sm-6">
+                @Html.DisplayNameFor(model => model.EntPhoneNumber)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.EntPhoneNumber)
+            </dd>
+            <dt class="col-sm-6">
+                @Html.DisplayNameFor(model => model.EntWebPage)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.EntWebPage)
+            </dd>
+            <dt class="col-sm-6">
+                @Html.DisplayNameFor(model => model.EntEMailAddress)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.EntEMailAddress)
+            </dd>
+            <dt class="col-sm-6">
+                @Html.DisplayNameFor(model => model.DateEntered)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.DateEntered)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="EntertainerID" />
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            <a asp-action="StageNames" class="btn btn-primary">Back to Entertainers</a>
+        </form>
+    </div>
+</div>

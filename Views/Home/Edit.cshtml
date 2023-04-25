@@ -1,0 +1,155 @@
+﻿@model FinalExam.Models.Entertainer
+
+@{
+    ViewData["Title"] = "Edit Entertainer";
+}
+
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <h1 class="display-5 fw-bolder text-white mb-2 text-center">Edit Entertainer</h1>
+        </div>
+    </div>
+</header>
+
+<div class="container text-center">
+    <br />
+    <div class="row">
+        <div>
+            <form asp-action="Edit">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td><strong>Attribute</strong></td>
+                            <td><strong>Value</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><label asp-for="EntertainerID" class="control-label"></label></td>
+                            <td><input asp-for="EntertainerID" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="EntStageName" class="control-label"></label></td>
+                            <td><input asp-for="EntStageName" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="EntSSN" class="control-label"></label></td>
+                            <td><input asp-for="EntSSN" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="EntStreetAddress" class="control-label"></label></td>
+                            <td><input asp-for="EntStreetAddress" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="EntCity" class="control-label"></label></td>
+                            <td><input asp-for="EntCity" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="EntState" class="control-label"></label></td>
+                            <td><input asp-for="EntState" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="EntZipCode" class="control-label"></label></td>
+                            <td><input asp-for="EntZipCode" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="EntPhoneNumber" class="control-label"></label></td>
+                            <td><input asp-for="EntPhoneNumber" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="EntWebPage" class="control-label"></label></td>
+                            <td><input asp-for="EntWebPage" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="EntEMailAddress" class="control-label"></label></td>
+                            <td><input asp-for="EntEMailAddress" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="DateEntered" class="control-label"></label></td>
+                            <td><input asp-for="DateEntered" class="form-control" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="form-group">
+                    <br />
+                    <input type="submit" value="Save" class="btn btn-success" />
+                </div>
+
+            </form>
+                @*<form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="EntertainerID" class="control-label"></label>
+                        <input asp-for="EntertainerID" class="form-control" />
+                        <span asp-validation-for="EntertainerID" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EntStageName" class="control-label"></label>
+                        <input asp-for="EntStageName" class="form-control" />
+                        <span asp-validation-for="EntStageName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EntSSN" class="control-label"></label>
+                        <input asp-for="EntSSN" class="form-control" />
+                        <span asp-validation-for="EntSSN" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EntStreetAddress" class="control-label"></label>
+                        <input asp-for="EntStreetAddress" class="form-control" />
+                        <span asp-validation-for="EntStreetAddress" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EntCity" class="control-label"></label>
+                        <input asp-for="EntCity" class="form-control" />
+                        <span asp-validation-for="EntCity" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EntState" class="control-label"></label>
+                        <input asp-for="EntState" class="form-control" />
+                        <span asp-validation-for="EntState" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EntZipCode" class="control-label"></label>
+                        <input asp-for="EntZipCode" class="form-control" />
+                        <span asp-validation-for="EntZipCode" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EntPhoneNumber" class="control-label"></label>
+                        <input asp-for="EntPhoneNumber" class="form-control" />
+                        <span asp-validation-for="EntPhoneNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EntWebPage" class="control-label"></label>
+                        <input asp-for="EntWebPage" class="form-control" />
+                        <span asp-validation-for="EntWebPage" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EntEMailAddress" class="control-label"></label>
+                        <input asp-for="EntEMailAddress" class="form-control" />
+                        <span asp-validation-for="EntEMailAddress" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DateEntered" class="control-label"></label>
+                        <input asp-for="DateEntered" class="form-control" />
+                        <span asp-validation-for="DateEntered" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <br />
+                        <input type="submit" value="Save" class="btn btn-success" />
+                    </div>
+                </form>*@
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <br />
+        <a asp-action="StageNames" class="btn btn-primary">Return to Entertainers</a>
+    </div>
+
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

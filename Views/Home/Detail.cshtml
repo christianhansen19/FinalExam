@@ -1,0 +1,82 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+@model FinalExam.Models.Entertainer
+
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <h1 class="display-5 fw-bolder text-white mb-2 text-center">Details for @Model.EntertainerID</h1>
+        </div>
+    </div>
+</header>
+
+<div class="text-center">
+
+    <table class="table table-bordered table-striped">
+        <thead class="font-weight-bold bg-secondary text-white">
+            <tr>
+                <td><strong>Attribute</strong></td>
+                <td><strong>Value</strong></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Entertainer ID</td>
+                <td>@Model.EntertainerID</td>
+            </tr>
+            <tr>
+                <td>Stage Name</td>
+                <td>@Model.EntStageName</td>
+            </tr>
+            <tr>
+                <td>SSN</td>
+                <td>@Model.EntSSN</td>
+            </tr>
+            <tr>
+                <td>Street Address</td>
+                <td>@Model.EntStreetAddress</td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>@Model.EntCity</td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td>@Model.EntState</td>
+            </tr>
+            <tr>
+                <td>Zip Code</td>
+                <td>@Model.EntZipCode</td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td>@Model.EntPhoneNumber</td>
+            </tr>
+            <tr>
+                <td>Web Page</td>
+                <td><a href="@Model.EntWebPage">@Model.EntWebPage</a></td>
+            </tr>
+            <tr>
+                <td>Email Address</td>
+                <td>@Model.EntEMailAddress</td>
+            </tr>
+            <tr>
+                <td>Date Entered</td>
+                <td>@Model.DateEntered</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br /><br />
+</div>
+
+<div class="container text-center">
+    <a asp-controller="Home" asp-action="Edit" asp-route-entid="@Model.EntertainerID" class="btn btn-primary">Edit</a>
+    <a asp-controller="Home" asp-action="Delete" asp-route-entid="@Model.EntertainerID" class="btn btn-danger">Delete</a>
+</div>
